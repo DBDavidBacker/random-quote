@@ -1,0 +1,158 @@
+
+video{
+  height: 50px; 
+  width: 400px;
+  margin-top: 20px;
+  
+}
+ 
+#root{
+  position: relative;
+ 
+  transition: transform 1s;
+  width: 900px;
+
+ padding: 20px;
+    background-color: white;  
+} 
+
+
+
+#quote-box{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+ 
+}
+
+.invis{
+  opacity: 0;
+}
+
+#root h1{
+  font-size: 25px;
+  color: #734996;
+}
+ 
+#root h2{
+  font-size: 35px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+#root h3{
+  font-size: 25px;
+}
+
+button{
+  background-color:#734996;
+    color: white;
+  
+}
+
+button:hover{
+  opacity: .7;
+}
+ 
+#root a{
+   border-radius: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+   background: #734996;
+  color: white;
+  margin-left: 400px;
+  margin-right: 100px;
+}
+
+#root a:hover{
+  opacity: 0.7;
+  animation-length: 5s;  
+}
+
+.vis{
+  opacity: 100;
+}
+
+
+ .vis, #author{
+  animation-name:fadeAuth;
+  animation-duration: 2.5s;
+}   
+ .butFade3{
+  animation-name: fadeOut2;
+  animation-duration: 8s;
+}
+  
+ .fader3{
+  animation-name: fadeOut;
+  animation-duration: 5s;
+}
+$j: 3;
+$i: 0; 
+@while $i < 300 {
+  #span-#{$i} {animation-name: fadeIn; 
+    animation-duration: #{$j}s;
+  animation-iteration-count: 1;
+  }
+  $i: $i + 1;  
+  $j: $j + .02;
+}  
+
+    
+
+ 
+  
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  } 
+  50%{
+    opacity: 0;
+  }
+}
+
+@keyframes fadeAuth{
+  0%{
+    opacity: 0
+  }
+}
+
+@keyframes fadeOut{
+  0%{
+    opacity: 100;
+  } 
+  50%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 100;
+  }
+ 
+}
+
+@keyframes fadeOut2{
+  0%{
+    opacity: 100;
+  } 
+  37.5%{
+    opacity: 0;
+  }
+  
+  70%{
+    opacity: 0
+  }
+  
+  100%{
+    opacity: 100;
+  }
+ 
+}
